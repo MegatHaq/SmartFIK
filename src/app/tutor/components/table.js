@@ -11,11 +11,13 @@ import {
 export async function Tables({ tableHeaders, tableItems }) {
   return (
     <Table>
-      <TableCaption>A list of your recent invoices.</TableCaption>
-      <TableHeader>
+      <TableCaption className="mb-2">
+        A list of your recent invoices.
+      </TableCaption>
+      <TableHeader className="bg-gray-900">
         <TableRow>
           {tableHeaders.map((header) => {
-            return <TableHead>{header}</TableHead>;
+            return <TableHead className="text-white">{header}</TableHead>;
           })}
           {/* <TableHead>Amount</TableHead> */}
         </TableRow>
