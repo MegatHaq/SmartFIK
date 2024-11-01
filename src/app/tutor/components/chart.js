@@ -30,7 +30,7 @@ export function Component({
   chartCaption1,
   chartCaption2,
 }) {
-  const totalVisitors = React.useMemo(() => {
+  const total = React.useMemo(() => {
     return chartData.reduce((acc, curr) => acc + curr.students, 0);
   }, []);
 
@@ -48,7 +48,7 @@ export function Component({
           <PieChart>
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent hideLabel />}
+              content={<ChartTooltipContent nameKey={nameKey} />}
             />
             <Pie
               data={chartData}
@@ -72,7 +72,7 @@ export function Component({
                           y={viewBox.cy}
                           className="fill-foreground text-3xl font-bold"
                         >
-                          {totalVisitors.toLocaleString()}
+                          {total.toLocaleString()}
                         </tspan>
                         <tspan
                           x={viewBox.cx}
