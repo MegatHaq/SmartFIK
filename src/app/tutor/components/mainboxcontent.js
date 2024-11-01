@@ -2,6 +2,7 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { CardDetails } from "./carddetails";
 import { PersonIcon } from "@radix-ui/react-icons";
 import { DollarSign, Group, Pencil } from "lucide-react";
+import { Details } from "./details";
 
 export function MainBoxContent({ title, position, name }) {
   const data = [
@@ -40,7 +41,9 @@ export function MainBoxContent({ title, position, name }) {
           );
         })}
       </div>
-      <div className="w-full px-4">These are where the graphs are located</div>
+      <div className="w-full px-4">
+        <Details />
+      </div>
     </div>
   );
 }
