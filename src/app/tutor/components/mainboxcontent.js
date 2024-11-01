@@ -40,18 +40,20 @@ export function MainBoxContent({ title, position, name }) {
       method: "Bank Transfer",
       amount: 120,
     },
-    {
-      invoice: "INV009",
-      status: "Paid",
-      method: "Credit Card",
-      amount: 240,
-    },
-    {
-      invoice: "INV010",
-      status: "Unpaid",
-      method: "Bank Transfer",
-      amount: 330,
-    },
+    // {
+    //   invoice: "INV009",
+    //   status: "Paid",
+    //   method: "Credit Card",
+    //   amount: 240,
+    // },
+    // {
+    //   invoice: "INV010",
+    //   status: "Unpaid",
+    //   method: "Bank Transfer",
+    //   amount: 330,
+    // },
+
+    //TBA paginations
   ];
 
   return (
