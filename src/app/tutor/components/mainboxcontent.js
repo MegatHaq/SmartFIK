@@ -5,10 +5,10 @@ import { DollarSign, Group, Pencil } from "lucide-react";
 
 export function MainBoxContent({ title, position, name }) {
   const data = [
-    { background: "black", data: "425", title: "Number of students" },
-    { background: "black", data: "245", title: "Number of employee" },
-    { background: "black", data: "508", title: "Number of tutors" },
-    { background: "black", data: "232,468", title: "Total revenue" },
+    { background: "bg-black", data: "425", title: "Number of students" },
+    { background: "bg-[purple]", data: "245", title: "Number of employee" },
+    { background: "bg-[pink]", data: "508", title: "Number of tutors" },
+    { background: "bg-[gray]", data: "232,468", title: "Total revenue" },
   ];
 
   const icons = [PersonIcon, Pencil, Group, DollarSign];
@@ -27,10 +27,9 @@ export function MainBoxContent({ title, position, name }) {
           </div>
         </div>
       </div>
-      <div className="px-4 w-full flex justify-around mt-4">
+      <div className="px-4 w-full grid grid-cols-4 gap-4 mt-4">
         {data.map((data, key) => {
           const Icon = icons[key];
-
           return (
             <CardDetails
               Icon={Icon}
