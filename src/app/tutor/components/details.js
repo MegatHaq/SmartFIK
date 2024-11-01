@@ -1,12 +1,15 @@
 import { Component } from "./chart";
+import { Tables } from "./table";
 
-export function Details() {
+export function Details({ tableHeaders, tableItems }) {
   return (
     <div className="flex gap-4">
-      <div className="w-3/6 shadow-md">
+      <div className="w-3/6">
         <Component />
       </div>
-      <div className="bg-[blue] w-full">This where the table will be.</div>
+      <div className="w-full">
+        <Tables tableHeaders={tableHeaders} tableItems={tableItems} />
+      </div>
     </div>
   );
 }
