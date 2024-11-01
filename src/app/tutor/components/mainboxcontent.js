@@ -5,10 +5,10 @@ import { DollarSign, Group, Pencil } from "lucide-react";
 
 export function MainBoxContent({ title, position, name }) {
   const data = [
-    { background: "bg-black", data: "425", title: "Number of students" },
-    { background: "bg-[purple]", data: "245", title: "Number of employee" },
-    { background: "bg-[pink]", data: "508", title: "Number of tutors" },
-    { background: "bg-[gray]", data: "232,468", title: "Total revenue" },
+    { background: "bg-gray-900", data: "425", title: "Number of students" },
+    { background: "bg-gray-900", data: "245", title: "Number of employee" },
+    { background: "bg-gray-900", data: "508", title: "Number of tutors" },
+    { background: "bg-gray-900", data: "232,468", title: "Total revenue" },
   ];
 
   const icons = [PersonIcon, Pencil, Group, DollarSign];
@@ -40,6 +40,7 @@ export function MainBoxContent({ title, position, name }) {
           );
         })}
       </div>
+      <div className="w-full px-4">These are where the graphs are located</div>
     </div>
   );
 }
