@@ -41,7 +41,7 @@ export function MainBoxContent({ title, position, name }) {
           );
         })}
       </div>
-      <div className="w-full px-4">
+      <div className="w-full px-4 mt-2">
         <Details />
       </div>
     </div>

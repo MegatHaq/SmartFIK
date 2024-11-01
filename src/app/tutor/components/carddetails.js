@@ -8,7 +8,7 @@ import {
 
 export function CardDetails({ Icon, background, data, title }) {
   return (
-    <Card className={`text-white ${background} my-auto h-5/6`}>
+    <Card className={`text-white ${background} my-auto h-5/6 shadow-md`}>
       <CardContent className="flex gap-4 items-center">
         <Icon className="w-6 h-6" />
         <div className="border-l px-3 mt-2">
