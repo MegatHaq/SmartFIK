@@ -1,8 +1,16 @@
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { CardDetails } from "./carddetails";
 
 export function MainBoxContent({ title, position, name }) {
+  const data = [
+    { background: "black", data: "425", title: "Number of students" },
+    { background: "black", data: "245", title: "Number of employee" },
+    { background: "black", data: "508", title: "Number of tutors" },
+    { background: "black", data: "232,468", title: "Total revenue" },
+  ];
+
   return (
-    <div className="flex flex-col-1 w-full h-screen">
+    <div className="flex flex-col w-full h-screen">
       <div className="flex flex-col-2 w-full px-4 py-4 mt-0 justify-between">
         <h1 className="text-2xl font-bold">{title}</h1>
         <div className="flex gap-3">
@@ -14,6 +22,13 @@ export function MainBoxContent({ title, position, name }) {
             <div className="text-sm text-gray-500">{position}</div>
           </div>
         </div>
+      </div>
+      <div className="px-4">
+        <CardDetails
+          background={"black"}
+          data={"425"}
+          title={"Number of students"}
+        />
       </div>
     </div>
   );
