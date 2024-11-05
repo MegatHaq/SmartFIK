@@ -7,7 +7,7 @@ export const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "My new app",
+  title: "SmartFIK",
   description: "Testing shadcn",
 };
 
