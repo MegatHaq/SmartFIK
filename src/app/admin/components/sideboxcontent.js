@@ -16,7 +16,7 @@ export const SideBoxContent = ({ items }) => {
         <GraduationCap className="w-8 h-8" />
         <h1>SmartFIK</h1>
       </div>
-      <div className="flex flex-col gap-4 w-full items-start">
+      <div className="flex flex-col items-start">
         {items.map((item, icon) => {
           const Icon = icons[icon];
           return (
