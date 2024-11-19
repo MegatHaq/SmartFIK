@@ -1,44 +1,15 @@
+"use client";
+
+import { DataTable } from "@/app/components/table/dataTable";
 import { Component } from "./chart";
-import { Tables } from "./table";
+import { columns } from "@/app/components/table/adminColumns";
+import { chartData, chartConfig } from "@/app/components/table/mockData";
+import { Label } from "@/components/ui/label";
 
-export function Details({ tableHeaders, tableItems }) {
-  const chartData = [
-    { student: "malays", students: 275, fill: "var(--color-malays)" },
-    { student: "chinese", students: 200, fill: "var(--color-chinese)" },
-    { student: "indians", students: 287, fill: "var(--color-indians)" },
-    { student: "ibans", students: 173, fill: "var(--color-ibans)" },
-    { student: "others", students: 190, fill: "var(--color-others)" },
-  ];
-
-  const chartConfig = {
-    students: {
-      label: "Students",
-    },
-    malays: {
-      label: "Malays",
-      color: "hsl(var(--chart-1))",
-    },
-    chinese: {
-      label: "Chinese",
-      color: "hsl(var(--chart-2))",
-    },
-    indians: {
-      label: "Indians",
-      color: "hsl(var(--chart-3))",
-    },
-    ibans: {
-      label: "Ibans",
-      color: "hsl(var(--chart-4))",
-    },
-    others: {
-      label: "Others",
-      color: "hsl(var(--chart-5))",
-    },
-  };
-
+export function Details({ tableItems }) {
   return (
     <div className="flex gap-4">
-      <div className="w-3/6">
+      <div className="w-3/6 h-[400px]">
         <Component
           chartData={chartData}
           chartConfig={chartConfig}
@@ -50,8 +21,13 @@ export function Details({ tableHeaders, tableItems }) {
           nameKey={"students"}
         />
       </div>
-      <div className="w-full rounded-md shadow-md">
-        <Tables tableHeaders={tableHeaders} tableItems={tableItems} />
+      <div className="flex flex-col w-full rounded-md shadow-md h-[380px]">
+        <div className="w-full h-[320px] overflow-auto">
+          <DataTable columns={columns} data={tableItems} />
+        </div>
+        <div className="w-full flex justify-center my-auto text-sm text-gray-600">
+          <Label>A list of your recent invoices.</Label>
+        </div>
       </div>
     </div>
   );

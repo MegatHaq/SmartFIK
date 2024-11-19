@@ -1,10 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import { DataTable } from "../components/table/dataTable";
+import { tableItems } from "../components/table/mockData";
+import { columns } from "../components/table/adminColumns";
 
 export default function () {
-  return (
-    <div>
-      This is the tutor page.
-      <DataTable />
-    </div>
-  );
+  const [data, setData] = useState(tableItems);
+
+  return <DataTable data={data} columns={columns} />;
 }

@@ -7,10 +7,10 @@ export const columns = [
     header: () => "Invoice",
     cell: (info) => info.getValue(),
   }),
-  columnsHelper.accessor((row) => row.status, {
+  columnsHelper.accessor("status", {
     id: "status",
-    cell: (info) => <div>{info.getValue()}</div>,
-    header: () => <div>Status</div>,
+    header: () => "Status",
+    cell: (info) => info.getValue(),
   }),
   columnsHelper.accessor("method", {
     header: () => "Method",
