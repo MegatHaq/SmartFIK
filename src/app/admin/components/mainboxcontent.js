@@ -13,7 +13,7 @@ export function MainBoxContent({
   tableItems,
 }) {
   return (
-    <div className="flex flex-col w-full h-screen">
+    <div className="flex flex-col w-full overflow-auto">
       <div className="flex flex-col-2 w-full px-4 py-4 mt-0 justify-between">
         <h1 className="text-2xl font-bold">{title}</h1>
         <User position={position} name={name} />
