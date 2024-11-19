@@ -1,5 +1,5 @@
+import BarChart from "@/app/components/barchart/bars";
 import { CardDetails } from "./carddetails";
-
 import { Details } from "./details";
 import User from "./user";
 
@@ -13,7 +13,7 @@ export function MainBoxContent({
   tableItems,
 }) {
   return (
-    <div className="flex flex-col w-full overflow-auto">
+    <div className="flex flex-col w-full overflow-auto h-screen">
       <div className="flex flex-col-2 w-full px-4 py-4 mt-0 justify-between">
         <h1 className="text-2xl font-bold">{title}</h1>
         <User position={position} name={name} />
@@ -33,6 +33,11 @@ export function MainBoxContent({
       </div>
       <div className="w-full px-4 mt-2">
         <Details tableHeaders={tableHeaders} tableItems={tableItems} />
+      </div>
+      <div className="w-full mb-4">
+        <div className="w-1/2 rounded-md border shadow-md mx-4">
+          <BarChart />
+        </div>
       </div>
     </div>
   );

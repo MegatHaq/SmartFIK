@@ -27,7 +27,9 @@ import {
 } from "@/components/ui/pagination";
 
 export const DataTable = ({ data, columns }) => {
-  const [pagination, setPagination] = useState({ pageIndex: 0, pageSize: 8 });
+  // TODO : add custom pagination for the table as the pagination from the shadcn causes hydration error.
+
+  const [pagination, setPagination] = useState({ pageIndex: 0, pageSize: 10 });
 
   const table = useReactTable({
     data,
@@ -67,7 +69,7 @@ export const DataTable = ({ data, columns }) => {
           </TableRow>
         ))}
       </TableBody>
-      <Pagination className={"mt-4 ml-4"}>
+      {/* <Pagination className={"mt-4 ml-4"}>
         <PaginationContent>
           <PaginationItem>
             <PaginationPrevious
@@ -100,7 +102,7 @@ export const DataTable = ({ data, columns }) => {
             />
           </PaginationItem>
         </PaginationContent>
-      </Pagination>
+      </Pagination> */}
     </Table>
   );
 };

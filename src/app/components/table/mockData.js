@@ -78,3 +78,23 @@ export const chartConfig = {
     color: "hsl(var(--chart-5))",
   },
 };
+
+export const chartDataBar = [
+  { month: "January", students: 186, tutors: 80 },
+  { month: "February", students: 305, tutors: 200 },
+  { month: "March", students: 237, tutors: 120 },
+  { month: "April", students: 73, tutors: 190 },
+  { month: "May", students: 209, tutors: 130 },
+  { month: "June", students: 214, tutors: 140 },
+];
+
+export const charBartConfig = {
+  student: {
+    label: "Students",
+    color: "#2563eb",
+  },
+  tutor: {
+    label: "Tutors",
+    color: "#60a5fa",
+  },
+};
