@@ -5,21 +5,14 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { charBartConfig, chartDataBar } from "../table/mockData";
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 
-export default function () {
+export default function ({ data, config }) {
   return (
-    <ChartContainer config={charBartConfig} className="w-full">
-      <BarChart accessibilityLayer data={chartDataBar}>
+    <ChartContainer config={config} className="w-full">
+      <BarChart accessibilityLayer data={data}>
         <CartesianGrid vertical={false} />
-        <XAxis
-          dataKey={"month"}
-          tickLine={false}
-          tickMargin={10}
-          axisLine={false}
-          tickFormatter={(value) => value.slice(0, 3)}
-        />
+        <XAxis dataKey={"month"} tickLine={false} axisLine={false} />
         <ChartTooltip content={<ChartTooltipContent />} />
         <Bar dataKey="students" fill="var(--color-student)" radius={4} />
         <Bar dataKey="tutors" fill="var(--color-tutor)" radius={4} />
