@@ -8,8 +8,8 @@ import { Label } from "@/components/ui/label";
 
 export function Details({ tableItems }) {
   return (
-    <div className="flex gap-4">
-      <div className="w-3/6 h-[400px]">
+    <div className="flex gap-4 my-4 md:my-0">
+      <div className="w-3/6 h-[400px] md:block hidden">
         <Component
           chartData={chartData}
           chartConfig={chartConfig}
@@ -21,7 +21,7 @@ export function Details({ tableItems }) {
           nameKey={"students"}
         />
       </div>
-      <div className="flex flex-col w-full rounded-md shadow-md h-[380px]">
+      <div className="flex flex-col w-full rounded-md shadow-md h-[380px] md:mx-0 mx-4 my-0 md:my-4">
         <div className="w-full h-[320px] overflow-auto">
           <DataTable columns={columns} data={tableItems} />
         </div>
