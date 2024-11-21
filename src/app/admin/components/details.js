@@ -21,7 +21,7 @@ export function Details({ tableItems }) {
           nameKey={"students"}
         />
       </div>
-      <div className="flex flex-col w-full rounded-md shadow-md h-[380px] md:mx-0 mx-4 my-0 md:my-4">
+      <div className="flex flex-col w-full rounded-md shadow-md h-[380px] md:mx-0 mx-4 my-4 md:my-0">
         <div className="w-full h-[320px] overflow-auto">
           <DataTable columns={columns} data={tableItems} />
         </div>
